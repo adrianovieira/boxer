@@ -1,4 +1,5 @@
 #!/bin/bash
+# upload VBoxGuestAdditions.iso to /home/vagrant/sync
 
 if [[ -f /etc/os-release  ]]; then
   . /etc/os-release
