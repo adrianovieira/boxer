@@ -63,4 +63,4 @@ sudo rm -f /tmp/docker-compose
 echo "INFO: [docker-install.sh] setup vagrant user as a docker group member"
 sudo usermod -G docker vagrant
 
-echo "INFO: [docker-install.sh] finished successfuly"
+echo "INFO: [docker-install.sh] finished"

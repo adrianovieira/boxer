@@ -18,10 +18,3 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
   sudo yum -y remove gcc make bzip2 kernel-headers kernel-devel-`uname -r`
   sudo yum clean all
 fi
-
-if [[ "$?" == "0"  ]]; then
-  echo "INFO: [vboxguestadditions-install.sh] finished successfuly"
-else
-  echo "ERROR: [vboxguestadditions-install.sh] finished with error"
-  exit 1
-fi

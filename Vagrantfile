@@ -24,6 +24,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       args: ["#{BOXER_HOSTNAME}"]
   config.vm.provision "housekeeper-cleanup", type: "shell", path: "setup/housekeeper-cleanup.sh"
 
-  config.vm.provision "vboxguest-install", type: "shell", path: "setup/vboxguestadditions-install.sh"
-
 end # end-of-file
