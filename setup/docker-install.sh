@@ -12,7 +12,7 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
   sudo cp /home/vagrant/sync/setup/yum.repos.d/* /etc/yum.repos.d/
 
   echo "INFO: [docker-install.sh] install docker-engine"
-  sudo yum install -y -q docker-engine-1.12.0-0.3.rc3.el7.centos
+  sudo yum install -y docker-engine-1.12.0-0.3.rc3.el7.centos
 
   echo "INFO: [docker-install.sh] start docker-engine"
   sudo systemctl daemon-reload
@@ -55,8 +55,10 @@ else
 fi
 
 echo "INFO: [docker-install.sh] install docker-compose"
-sudo curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
+sudo chmod +x /tmp/docker-compose
+sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
+sudo rm -f /tmp/docker-compose
 
 echo "INFO: [docker-install.sh] setup vagrant user as a docker group member"
 sudo usermod -G docker vagrant
