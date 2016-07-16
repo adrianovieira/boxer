@@ -18,10 +18,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_check_update = false
   config.vm.synced_folder ".", "/home/vagrant/sync", type: "rsync"
 
-  config.vm.provision "housekeeper-bootstrap", type: "shell", path: "setup/housekeeper-bootstrap.sh"
+  config.vm.provision "housekeeper-bootstrap", type: "shell", path: "centos7/housekeeper-bootstrap.sh"
   config.vm.provision "housekeeper-hostname", type: "shell",
-                      path: "setup/housekeeper-hostname.sh",
+                      path: "centos7/housekeeper-hostname.sh",
                       args: ["#{BOXER_HOSTNAME}"]
-  config.vm.provision "housekeeper-cleanup", type: "shell", path: "setup/housekeeper-cleanup.sh"
+  config.vm.provision "housekeeper-cleanup", type: "shell", path: "centos7/housekeeper-cleanup.sh"
 
 end # end-of-file
