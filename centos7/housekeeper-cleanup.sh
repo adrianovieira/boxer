@@ -10,3 +10,5 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
 fi
 
 sudo rm -rf /home/vagrant/sync
+sudo yum clean all
+yum clean all
