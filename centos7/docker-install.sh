@@ -13,14 +13,13 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
   sudo yum update -y -q
 
   echo "INFO: [docker-install.sh] install docker-engine"
-  sudo yum install -y docker-engine-1.12.0-1.el7.centos
+  sudo yum install -y docker-engine-1.12.1-1.el7.centos.x86_64.rpm
 
   echo "INFO: [docker-install.sh] start docker-engine"
   sudo systemctl daemon-reload
   sudo systemctl enable docker && sudo systemctl start docker
 
   echo "INFO: [docker-install.sh] install docker-compose"
-  #sudo curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
   sudo curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /tmp/docker-compose
   sudo chmod +x /tmp/docker-compose
   sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
