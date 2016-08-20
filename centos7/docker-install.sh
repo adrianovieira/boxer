@@ -13,7 +13,7 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
   sudo yum update -y -q
 
   echo "INFO: [docker-install.sh] install docker-engine"
-  sudo yum install -y docker-engine-1.12.1-1.el7.centos.x86_64.rpm
+  sudo yum install -y docker-engine-1.12.1-1.el7.centos
 
   echo "INFO: [docker-install.sh] start docker-engine"
   sudo systemctl daemon-reload
