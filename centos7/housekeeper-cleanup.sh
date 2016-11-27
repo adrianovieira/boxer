@@ -10,5 +10,6 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
 fi
 
 sudo rm -rf /home/vagrant/sync
+sudo rm -rf /etc/sysconfig/network-scripts/ifcfg-eth[1-5]
 sudo yum clean all
 yum clean all
