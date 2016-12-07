@@ -12,6 +12,6 @@ if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
   sudo yum clean all
   sudo yum -y install epel-release
   sudo yum update -y
-  sudo yum install -y vim puppet-agent
+  sudo yum install -y vim net-tools puppet-agent
   sudo yum clean all
 fi
