@@ -6,14 +6,7 @@ if [[ -f /etc/os-release  ]]; then
 fi
 
 if [[ "$ID" == "centos" && "$VERSION_ID" == "7" ]]; then
-  echo "INFO: [docker-install.sh] importing gpg key from dockerproject"
-  sudo rpm --import https://yum.dockerproject.org/gpg
-  sudo cp /home/vagrant/sync/centos7/yum.repos.d/* /etc/yum.repos.d/
-  sudo yum clean all
-  sudo yum update -y -q
-
   echo "INFO: [docker-install.sh] install docker-engine"
-  #sudo yum install -y docker-engine-1.12.1-1.el7.centos
   sudo yum install -y docker-engine
 
   echo "INFO: [docker-install.sh] start docker-engine"
