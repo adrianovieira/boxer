@@ -1,2 +1,3 @@
-deb https://apt.dockerproject.org/repo debian-jessie main testing
-#deb https://apt.dockerproject.org/repo debian-jessie main experimental
+deb https://apt.dockerproject.org/repo debian-jessie main
+#deb https://apt.dockerproject.org/repo debian-jessie testing
+#deb https://apt.dockerproject.org/repo debian-jessie experimental
