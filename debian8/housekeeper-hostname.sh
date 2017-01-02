@@ -11,5 +11,6 @@ else
 fi
 if [[ "$ID" == "debian" && "$VERSION_ID" == "8" ]]; then
   sudo hostnamectl set-hostname $HOSTNAME
+  sudo hostname $HOSTNAME
   sudo hostnamectl status
 fi
