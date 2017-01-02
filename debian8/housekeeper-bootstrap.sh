@@ -6,7 +6,8 @@ fi
 
 if [[ "$ID" == "debian" && "$VERSION_ID" == "8" ]]; then
   sudo apt-get clean
-  sudo apt-get -qq autoclean
+  sudo apt-get autoclean
+  sudo apt-get install -qq -y --force-yes apt-transport-https curl wget
   sudo apt-get -qq update
-  sudo apt-get -y safe-upgrade
+  sudo apt-get upgrade -y
 fi
